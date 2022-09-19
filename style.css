@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #110101;
+  font-weight: 400;
+  line-height: 1.6;
+  height: 100vh;
+  overscroll-behavior-y: none;
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(234, 214, 238, 0.5),
+    rgba(160, 241, 234, 0.3)
+  );
+  /* color: #a0f1ea; */
+  /* padding: 4.5rem; */
+
+  display: flex;
+}
+.main {
+  margin: 0 auto;
+  font-size: 1.6rem;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(234, 214, 238, 0.979),
+    rgba(160, 241, 234, 0.8)
+  );
+  border: 1px solid rgb(234, 214, 238);
+  min-height: 98vh;
+  width: 60%;
+  padding: 5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.list__input {
+  width: 46%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .list__input {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .list__input {
+    width: 42%;
+  }
+}
+
+.list__input,
+.list__btn {
+  padding: 1rem;
+  outline: none;
+  margin-bottom: 3rem;
+}
+.listItems {
+  /* background-color: #e0c4fd; */
+  /* padding: 3rem; */
+  transition: all 0.9s;
+  margin-bottom: 2rem;
+}
+.items {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e0c4fd;
+  margin-bottom: 1rem;
+
+  transition: all 0.9s;
+}
+
+.items:hover {
+  background-color: #a0f1ea;
+}
+.items__items {
+  display: flex;
+
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.item__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  /* background-color: #ccc; */
+}
+
+.items__price {
+  font-size: 1rem;
+  color: red;
+  padding: 1rem;
+
+  /* background-color: aliceblue; */
+  /* padding-left: 1rem; */
+}
+.budget {
+  float: right;
+  margin-right: 6rem;
+}
+
+.fa-solid {
+  color: #ccc;
+}
+
+.fa-solid:hover {
+  color: yellow;
+}
+.delete {
+  margin-left: 1rem;
+  padding: 0.4rem;
+  margin-left: 0.3rem;
+  /* opacity: 0; */
+  transition: all 0.4s;
+}
+.sub,
+.add {
+  padding: 0.4rem;
+}
+.items:hover .delete {
+  opacity: 1;
+}
+
+.listItem {
+  /* background-color: #110101; */
+}
