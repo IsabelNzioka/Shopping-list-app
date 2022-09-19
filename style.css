@@ -113,6 +113,11 @@ h1 {
   list-style: none;
   padding-left: 1rem;
 }
+@media only screen and (max-width: 500px) {
+  .items__items {
+    padding-left: 0;
+  }
+}
 
 .item__details {
   display: flex;
