@@ -41,6 +41,18 @@ body {
   padding: 5rem;
 }
 
+@media only screen and (max-width: 800px) {
+  .main {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .main {
+    width: 85%;
+  }
+}
+
 h1 {
   text-align: center;
   margin-bottom: 3.5rem;
@@ -57,6 +69,14 @@ h1 {
 @media only screen and (max-width: 950px) {
   .list__input {
     width: 42%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main {
+    width: 100%;
+    /* padding-left: 5rem 1rem; */
+    padding: 5rem 2rem;
   }
 }
 
