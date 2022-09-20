@@ -87,13 +87,14 @@ h1 {
   margin-bottom: 3rem;
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 300px) {
   .list__input {
     width: 100%;
     margin-bottom: 0.5rem;
   }
   .list__btn {
     padding: 0.8rem;
+    margin-bottom: 5rem;
   }
 }
 .listItems {
