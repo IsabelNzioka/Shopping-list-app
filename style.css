@@ -86,6 +86,16 @@ h1 {
   outline: none;
   margin-bottom: 3rem;
 }
+
+@media only screen and (max-width: 370px) {
+  .list__input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .list__btn {
+    padding: 0.8rem;
+  }
+}
 .listItems {
   /* background-color: #e0c4fd; */
   /* padding: 3rem; */
@@ -135,6 +145,10 @@ h1 {
   /* background-color: aliceblue; */
   /* padding-left: 1rem; */
 }
+.total {
+  display: flex;
+  justify-content: space-between;
+}
 .budget {
   float: right;
   margin-right: 6rem;
@@ -145,7 +159,7 @@ h1 {
 }
 
 .fa-solid:hover {
-  color: yellow;
+  color: rgb(167, 167, 14);
 }
 .delete {
   margin-left: 1rem;
@@ -162,6 +176,9 @@ h1 {
   opacity: 1;
 }
 
-.listItem {
-  /* background-color: #110101; */
+.bought {
+  text-decoration: line-through;
+}
+.checked {
+  background-color: #a0f1ea !important;
 }

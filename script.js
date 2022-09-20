@@ -79,11 +79,11 @@ function calcPrice(e) {
 
     // console.log("total1", total);
     let num = total.filter((num) => num === amount);
-    if (total.includes(amount) && !(num.length > 1)) item.remove();
-    total.splice(total.indexOf(amount), 1);
-    // total.includes(amount) && num.length > 1
-    //   ? console.log(total.splice(total.indexOf(amount), 1))
-    //   : item.remove();
+    // if (total.includes(amount) && !(num.length > 1)) item.remove();
+    // total.splice(total.indexOf(amount), 1);
+    total.includes(amount) && num.length > 1
+      ? console.log(total.splice(total.indexOf(amount), 1))
+      : item.remove();
 
     console.log(" subbb totalpppppppppppp", total);
   }
@@ -99,6 +99,39 @@ function calcPrice(e) {
     }, 0);
     budget.textContent = `$${balance}`;
     e.target.parentElement.parentElement.remove();
+  }
+
+  //bought items
+
+  if (e.target.closest(".items__item")) {
+    // console.log(e.target.parentElement.parentElement.parentElement);
+    e.target.parentElement.parentElement.parentElement.style.backgroundColor =
+      "#a0f1ea";
+
+    // console.log(
+    //   e.target.parentElement.parentElement.nextElementSibling.firstElementChild
+    // );
+    const amount =
+      +e.target.parentElement.parentElement.nextElementSibling.firstElementChild.textContent.slice(
+        1
+      );
+
+    // console.log(
+    //   e.target.parentElement.parentElement.nextElementSibling.children
+    // );
+    const dis =
+      e.target.parentElement.parentElement.nextElementSibling.children;
+    console.log("disssssssssss", dis);
+    for (const diss of dis) {
+      diss.matches("button") && (diss.disabled = true);
+    }
+    total = total.filter((mov) => mov != amount);
+    const balance = total.reduce(function (acc, cur) {
+      return acc + cur;
+    }, 0);
+    budget.textContent = `$${balance}`;
+
+    console.log(" subbb totalpppppppppppp", total);
   }
 }
 
