@@ -5,6 +5,7 @@ const listPrice = document.querySelector(".list__input--price");
 const listQuality = document.querySelector(".list__input--quality");
 const budget = document.querySelector(".budget");
 const itms = document.querySelector(".listItem");
+const clearBtn = document.querySelector(".clear");
 
 let price;
 let total = [];
@@ -135,18 +136,15 @@ function calcPrice(e) {
   }
 }
 
+function clearItems(e) {
+  const dis = e.target.parentElement.parentElement.children;
+  for (const diss of dis) {
+    diss.matches("ul") && (diss.innerHTML = "");
+  }
+  total = [];
+  budget.textContent = `$0`;
+}
+
 listItems.addEventListener("click", calcPrice);
 
-let movs = [200, 200];
-let moves = movs.filter((mov) => mov === 100);
-console.log(moves.splice(moves.indexOf(200), 1));
-// movs = movs.filter((mov) => mov != 100);
-
-// movs.includes(100)
-//   ? console.log(movs.splice(movs.indexOf(100), 1))
-//   : console.log("bes");
-
-// let mov = movs.splice(0, 1);
-console.log("moves, moves", moves);
-console.log(movs.length);
-// console.log(mov);
+clearBtn.addEventListener("click", clearItems);
